@@ -19,7 +19,7 @@ import {
     const styles = useMemo(() => stylesFn(Colors), [Colors]);
     return (
       <Text
-        style={[Fonts.fManrope, Fonts.textColorDefault, styles.baseText, style]}
+        style={[Fonts.fWorkSans, Fonts.textColorDefault, styles.baseText, style]}
         {...props}
       >
         {children}

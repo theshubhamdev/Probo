@@ -6,10 +6,13 @@ const Colors = {
   background: "#fff",
 
   // Button
-  btnPrimary: "#fc8019",
-  btnPrimaryText: "#fff",
+  btnPrimary: "#e8f2ff",
+  btnPrimaryText: "#197bff",
   btnShadow: "#366173",
 
+  btnSecondary: "#fdf3f2",
+  btnSecondaryText: "#dc2706",
+  
   cardShadow: "#021D5A",
 };
 

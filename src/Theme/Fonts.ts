@@ -3,8 +3,9 @@ import { FontSize } from "./Variables";
 import Colors from "./Colors";
 
 export default StyleSheet.create({
-  fManrope: {
-    fontFamily: "Manrope",
+  fWorkSans: {
+    fontFamily: "WorkSans",
+    letterSpacing: 0.8,
   },
   textMicro: {
     fontSize: FontSize.micro,
@@ -29,6 +30,9 @@ export default StyleSheet.create({
   },
   textColorDefault: {
     color: Colors.text,
+  },
+  textColorPrimary: {
+    color: Colors.btnPrimaryText  
   },
   h1Bold: {
     fontSize: 22,

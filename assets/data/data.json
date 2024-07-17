@@ -1,0 +1,204 @@
+{
+  "polls": [
+    {
+      "pollId": "poll001",
+      "question": "Do you think AI will surpass human intelligence?",
+      "options": [
+        {
+          "optionId": "opt001",
+          "text": "Yes",
+          "amount": 150
+        },
+        {
+          "optionId": "opt002",
+          "text": "No",
+          "amount": 75
+        }
+      ],
+      "createdBy": "user123",
+      "createdAt": "2023-03-10T08:45:00Z",
+      "excerpt": "A heated debate on whether AI will ever surpass human intelligence.",
+      "traders": 225
+    },
+    {
+      "pollId": "poll002",
+      "question": "Is remote work more productive than office work?",
+      "options": [
+        {
+          "optionId": "opt003",
+          "text": "Yes",
+          "amount": 200
+        },
+        {
+          "optionId": "opt004",
+          "text": "No",
+          "amount": 100
+        }
+      ],
+      "createdBy": "user456",
+      "createdAt": "2023-04-12T11:20:00Z",
+      "excerpt": "Discussions on the productivity differences between remote and office work.",
+      "traders": 300
+    },
+    {
+      "pollId": "poll003",
+      "question": "Should cryptocurrency be considered a legal tender?",
+      "options": [
+        {
+          "optionId": "opt005",
+          "text": "Yes",
+          "amount": 120
+        },
+        {
+          "optionId": "opt006",
+          "text": "No",
+          "amount": 80
+        }
+      ],
+      "createdBy": "user234",
+      "createdAt": "2023-05-05T09:30:00Z",
+      "excerpt": "Exploring the feasibility of cryptocurrency as a legal tender.",
+      "traders": 200
+    },
+    {
+      "pollId": "poll004",
+      "question": "Will electric vehicles dominate the market by 2030?",
+      "options": [
+        {
+          "optionId": "opt007",
+          "text": "Yes",
+          "amount": 300
+        },
+        {
+          "optionId": "opt008",
+          "text": "No",
+          "amount": 150
+        }
+      ],
+      "createdBy": "user567",
+      "createdAt": "2023-06-10T07:45:00Z",
+      "excerpt": "Predictions on the future of electric vehicles in the market.",
+      "traders": 450
+    },
+    {
+      "pollId": "poll005",
+      "question": "Is climate change the biggest threat to humanity?",
+      "options": [
+        {
+          "optionId": "opt009",
+          "text": "Yes",
+          "amount": 220
+        },
+        {
+          "optionId": "opt010",
+          "text": "No",
+          "amount": 130
+        }
+      ],
+      "createdBy": "user678",
+      "createdAt": "2023-07-01T12:00:00Z",
+      "excerpt": "Debate on whether climate change poses the greatest threat to humanity.",
+      "traders": 350
+    },
+    {
+      "pollId": "poll006",
+      "question": "Will space tourism become mainstream by 2040?",
+      "options": [
+        {
+          "optionId": "opt011",
+          "text": "Yes",
+          "amount": 180
+        },
+        {
+          "optionId": "opt012",
+          "text": "No",
+          "amount": 90
+        }
+      ],
+      "createdBy": "user789",
+      "createdAt": "2023-08-15T15:30:00Z",
+      "excerpt": "Speculations on the future of space tourism and its mainstream acceptance.",
+      "traders": 270
+    },
+    {
+      "pollId": "poll007",
+      "question": "Is universal basic income a viable solution for poverty?",
+      "options": [
+        {
+          "optionId": "opt013",
+          "text": "Yes",
+          "amount": 250
+        },
+        {
+          "optionId": "opt014",
+          "text": "No",
+          "amount": 100
+        }
+      ],
+      "createdBy": "user890",
+      "createdAt": "2023-09-20T10:10:00Z",
+      "excerpt": "Discussions on the effectiveness of universal basic income in eradicating poverty.",
+      "traders": 350
+    },
+    {
+      "pollId": "poll008",
+      "question": "Will renewable energy replace fossil fuels completely by 2050?",
+      "options": [
+        {
+          "optionId": "opt015",
+          "text": "Yes",
+          "amount": 310
+        },
+        {
+          "optionId": "opt016",
+          "text": "No",
+          "amount": 190
+        }
+      ],
+      "createdBy": "user901",
+      "createdAt": "2023-10-05T14:20:00Z",
+      "excerpt": "Evaluating the potential of renewable energy to fully replace fossil fuels.",
+      "traders": 500
+    },
+    {
+      "pollId": "poll009",
+      "question": "Is online education as effective as traditional education?",
+      "options": [
+        {
+          "optionId": "opt017",
+          "text": "Yes",
+          "amount": 275
+        },
+        {
+          "optionId": "opt018",
+          "text": "No",
+          "amount": 125
+        }
+      ],
+      "createdBy": "user012",
+      "createdAt": "2023-11-12T11:50:00Z",
+      "excerpt": "Comparing the effectiveness of online education to traditional classroom education.",
+      "traders": 400
+    },
+    {
+      "pollId": "poll010",
+      "question": "Will 5G technology revolutionize the telecommunications industry?",
+      "options": [
+        {
+          "optionId": "opt019",
+          "text": "Yes",
+          "amount": 290
+        },
+        {
+          "optionId": "opt020",
+          "text": "No",
+          "amount": 160
+        }
+      ],
+      "createdBy": "user345",
+      "createdAt": "2023-12-25T08:00:00Z",
+      "excerpt": "Debating the impact of 5G technology on the telecommunications sector.",
+      "traders": 450
+    }
+  ]
+}

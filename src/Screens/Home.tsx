@@ -1,13 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, View } from "react-native";
 import React from "react";
 import { useTheme } from "../Hooks";
+import { QuestionCard } from "../Components/Home";
+import QuestionsCardList from "../Components/Home/QuestionsCardList";
 
 const Home = () => {
-  const { Layout } = useTheme();
+  const { Layout, Gutters, Fonts, Colors } = useTheme();
   return (
-    <View style={[]}>
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView style={[Gutters.regularHPadding]}>
+      <QuestionsCardList />
+    </SafeAreaView>
   );
 };
 

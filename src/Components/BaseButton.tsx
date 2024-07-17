@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { FC, useMemo } from "react";
 import { useTheme } from "../Hooks";
-import { BaseText } from "./";
+import BaseText from "./BaseText";
 import { ThemeColors } from "../Theme/theme.types";
 
 interface Props {
@@ -49,9 +49,8 @@ const BaseButton: FC<Props> = ({
       style={[
         Layout.center,
         styles.btnBackground,
+        Gutters.regularVPadding,
         buttonStyles,
-        styles.cardShadow,
-        Gutters.midLargeVPadding,
         btnStyles,
         btnBackgroundColor ? { backgroundColor: btnBackgroundColor } : {},
       ]}
@@ -59,9 +58,9 @@ const BaseButton: FC<Props> = ({
       <BaseText
         style={[
           styles.text,
-          Fonts.textRegular,
-          Fonts.wt800,
-          textColor ? { backgroundColor: textColor } : {},
+          Fonts.textMini,
+          Fonts.wt700,
+          textColor ? { color: textColor } : {},
           textStyles,
         ]}
       >
@@ -85,16 +84,6 @@ const stylesFn = (Colors: ThemeColors) =>
       borderRadius: 40,
     },
     flatButton: {
-      borderRadius: 10,
-    },
-    cardShadow: {
-      shadowColor: Colors.btnShadow,
-      shadowOffset: {
-        width: 0,
-        height: 1,
-      },
-      shadowOpacity: 0.22,
-      shadowRadius: 2.22,
-      elevation: 10,
+      borderRadius: 7,
     },
   });
