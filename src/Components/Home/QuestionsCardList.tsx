@@ -1,13 +1,16 @@
-import { FlatList, ListRenderItem, StyleSheet, View } from "react-native";
+import { FlatList, ListRenderItem, Pressable, StyleSheet, View } from "react-native";
 import React, { useCallback } from "react";
 import QUESTIONS from "../../../assets/data/data.json";
-import QuestionCard, { Poll } from "./QuestionCard";
+import QuestionCard  from "./QuestionCard";
 import { useTheme } from "../../Hooks";
+import { Poll } from "../../Context/ActivePollContext";
+import { useNavigation } from "@react-navigation/native";
 
 const QuestionsCardList = () => {
   const { Gutters } = useTheme();
+
   const renderItem: ListRenderItem<Poll> = useCallback(
-    ({ item, index }) => (
+    ({ item }) => (
       <View style={Gutters.smallVPadding}>
         <QuestionCard poll={item} />
       </View>

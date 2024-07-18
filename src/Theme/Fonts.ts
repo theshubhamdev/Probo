@@ -7,6 +7,9 @@ export default StyleSheet.create({
     fontFamily: "WorkSans",
     letterSpacing: 0.8,
   },
+  textTiny: {
+    fontSize: FontSize.tiny,
+  },
   textMicro: {
     fontSize: FontSize.micro,
   },

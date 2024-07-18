@@ -1,7 +1,7 @@
 import { SafeAreaView, StyleSheet, View } from "react-native";
 import React from "react";
 import { useTheme } from "../Hooks";
-import { QuestionCard } from "../Components/Home";
+import { QuestionCard, QuestionsModal } from "../Components/Home";
 import QuestionsCardList from "../Components/Home/QuestionsCardList";
 
 const Home = () => {
@@ -9,6 +9,7 @@ const Home = () => {
   return (
     <SafeAreaView style={[Gutters.regularHPadding]}>
       <QuestionsCardList />
+      <QuestionsModal />
     </SafeAreaView>
   );
 };

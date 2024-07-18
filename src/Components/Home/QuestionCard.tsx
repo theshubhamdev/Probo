@@ -4,22 +4,12 @@ import { useTheme } from "../../Hooks";
 import { BaseButton, BaseCard, BaseText } from "../";
 import { Feather } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
-
-export interface Poll {
-  pollId: string;
-  question: string;
-  options: Option[];
-  createdBy: string;
-  createdAt: string;
-  excerpt: string;
-  traders: number;
-}
-
-interface Option {
-  optionId: string;
-  text: string;
-  amount: number;
-}
+import {
+  Poll,
+  PollOption,
+  useActivePoll,
+} from "../../Context/ActivePollContext";
+import { useNavigation } from "@react-navigation/native";
 
 interface Props {
   poll: Poll;
@@ -28,14 +18,22 @@ interface Props {
 const QuestionCard: FC<Props> = ({ poll }) => {
   const { question, options, excerpt, traders } = poll;
   const { Layout, Gutters, Fonts, Colors } = useTheme();
-
-  const onBtnPress = () => {
-    console.warn("Button Pressed");
+  const navigation = useNavigation();
+  const onCardPress = () => {
+    navigation.navigate("QuestionsDetails", { poll });
+  };
+  const { setActivePoll, setActiveOption } = useActivePoll();
+  const onBtnPress = (option: PollOption) => {
+    setActivePoll(poll);
+    setActiveOption(option);
   };
   return (
-    <BaseCard style={[Layout.fullWidth,Gutters.midLargePadding]}>
+    <BaseCard
+      onPress={onCardPress}
+      style={[Layout.fullWidth, Gutters.midLargePadding]}
+    >
       <View style={[Layout.row, Layout.alignItemsCenter]}>
-        <View style={[{flex: 4}]}>
+        <View style={[{ flex: 4 }]}>
           <View
             style={[
               Layout.row,
@@ -49,14 +47,17 @@ const QuestionCard: FC<Props> = ({ poll }) => {
               {traders} traders
             </BaseText>
           </View>
-          <BaseText style={[Gutters.smallRPadding, Fonts.textSmall, Fonts.wt600]}>{question}</BaseText>
+          <BaseText
+            style={[Gutters.smallRPadding, Fonts.textSmall, Fonts.wt600]}
+          >
+            {question}
+          </BaseText>
         </View>
         <Image
           source={{
-            uri:
-              "https://picsum.photos/200",
+            uri: "https://picsum.photos/200",
           }}
-          style={[{ width: 50, aspectRatio:1, flex: 1 }]}
+          style={[{ width: 50, aspectRatio: 1, flex: 1 }]}
         />
       </View>
       <View
@@ -68,7 +69,7 @@ const QuestionCard: FC<Props> = ({ poll }) => {
           color="black"
           style={[Gutters.smallRPadding]}
         />
-        <BaseText style={[Gutters.smallRPadding, { lineHeight: 22}]}>
+        <BaseText style={[Gutters.smallRPadding, { lineHeight: 22 }]}>
           {excerpt}{" "}
           <BaseText style={[Fonts.textColorPrimary, Fonts.wt800]}>
             Read More
@@ -78,7 +79,7 @@ const QuestionCard: FC<Props> = ({ poll }) => {
       <View style={[Layout.row]}>
         {options.map((option, index) => (
           <BaseButton
-            onPress={onBtnPress}
+            onPress={() => onBtnPress(option)}
             key={option.optionId}
             type="FLAT"
             text={`${option.text} ₹${option.amount}`}
@@ -88,7 +89,7 @@ const QuestionCard: FC<Props> = ({ poll }) => {
             btnBackgroundColor={
               index % 2 === 0 ? Colors.btnPrimary : Colors.btnSecondary
             }
-            btnStyles={[Layout.fill, index !== 0 && Gutters.smallLMargin ]}
+            btnStyles={[Layout.fill, index !== 0 && Gutters.smallLMargin]}
           />
         ))}
       </View>
